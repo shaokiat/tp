@@ -1,6 +1,7 @@
 package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_CODE;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import seedu.address.model.Model;
 import seedu.address.model.module.Module;
 
 /**
- * Deletes a Module identified using it's displayed index from the GradPad.
+ * Deletes a Module identified using the ModuleCode from the GradPad.
  */
 public class DeleteCommand extends Command {
 
@@ -19,8 +20,10 @@ public class DeleteCommand extends Command {
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Deletes the module identified by the index number used in the displayed module list.\n"
-            + "Parameters: INDEX (must be a positive integer)\n"
-            + "Example: " + COMMAND_WORD + " 1";
+            + "Parameters: "
+            + PREFIX_CODE + "MODULE CODE "
+            + "Example: " + COMMAND_WORD + " "
+            + PREFIX_CODE + "CS1231 ";
 
     public static final String MESSAGE_DELETE_MODULE_SUCCESS = "Deleted Module: %1$s";
 
@@ -35,9 +38,9 @@ public class DeleteCommand extends Command {
         requireNonNull(model);
         List<Module> lastShownList = model.getFilteredModuleList();
 
-        if (targetIndex.getZeroBased() >= lastShownList.size()) {
-            throw new CommandException(Messages.MESSAGE_INVALID_MODULE_DISPLAYED_INDEX);
-        }
+//        if (targetIndex.getZeroBased() >= lastShownList.size()) {
+//            throw new CommandException(Messages.MESSAGE_INVALID_MODULE_DISPLAYED_INDEX);
+//        }
 
         Module moduleToDelete = lastShownList.get(targetIndex.getZeroBased());
         model.deleteModule(moduleToDelete);
