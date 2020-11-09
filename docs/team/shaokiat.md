@@ -37,6 +37,7 @@ Given below are my contributions to the project.
   * Recorded comments by Peers and Tutors with regards to GradPad especially on User Guide and Developer Guide.
   * Addressed issues on User Guide from mock PE.
   * Reviews and comments to team mates PR. [Example: \#111](https://github.com/AY2021S1-CS2103T-T09-1/tp/pull/111)
+  * Managed release for v1.4 on GitHub for submission.
 
 * **Enhancements to existing features**:
   * Refactored the `Delete` feature and command to take in module code as parameters instead of index. [\#120](https://github.com/AY2021S1-CS2103T-T09-1/tp/pull/120)
