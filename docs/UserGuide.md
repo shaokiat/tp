@@ -214,6 +214,8 @@ To view all tags:
 2. The _Result Display Box_ will display a list of all existing tags.
 ![Tag2](images/Tags2.png)
 
+<div style="page-break-after: always;"></div>
+
 ### Editing module details: `edit`
 
 Scenario:<br>
